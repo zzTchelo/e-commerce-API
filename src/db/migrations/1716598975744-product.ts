@@ -5,7 +5,7 @@ export class Product1716598975744 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`CREATE EXTENSION IF NOT EXISTS "uuid-ossp";`)
         await queryRunner.query(`
-            CREATE TABLE products (
+            CREATE TABLE product (
                 id uuid NOT NULL DEFAULT uuid_generate_v4(),
                 name VARCHAR(100) NOT NULL,
                 description TEXT,
